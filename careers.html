@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Entally Blue Print">
+	<meta name="description" content="designed for patient focused care">
+	<meta name="keywords" content="patient, care, pharmacy, Entally Blue Print, pharmacy-files">
+	<title>Careers | Entally Blue Print</title>
+
+	<link rel="icon" href="./assets/images/favicon/favicon.ico">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/aos/css/aos.css">
+	<link rel="stylesheet" href="./assets/css/style.min.css">
+
+	<style>
+		.careers-kicker{
+			letter-spacing:.25em;
+			text-transform:uppercase;
+			font-weight:700;
+			margin:0 0 10px 0;
+			color:#0d1943;
+			font-family:"DM Sans",sans-serif;
+		}
+		.careers-title{
+			margin:0 0 18px 0;
+			line-height:1;
+			color:#1A4574;
+			font-family:"Inter",sans-serif;
+		}
+		.careers-lead{
+			margin:0 0 26px 0;
+			font-family:"DM Sans",sans-serif;
+			font-weight:600;
+			line-height:1.9;
+			color:#0d1943;
+			opacity:.92;
+		}
+		.careers-card{
+			border-radius:16px;
+			background:#fff;
+			box-shadow:0 14px 34px rgba(13,25,67,0.10);
+			padding:22px 22px;
+			height:100%;
+		}
+		.careers-card__top{
+			display:flex;
+			align-items:flex-start;
+			justify-content:space-between;
+			gap:14px;
+			margin-bottom:10px;
+		}
+		.careers-card__title{
+			margin:0;
+			font-family:"Inter",sans-serif;
+			font-weight:900;
+			color:#1A4574;
+			font-size:18px;
+			letter-spacing:.02em;
+			line-height:1.25;
+		}
+		.careers-chip{
+			display:inline-flex;
+			align-items:center;
+			gap:8px;
+			padding:8px 12px;
+			border-radius:999px;
+			background:rgba(26,69,116,0.10);
+			color:#1A4574;
+			font-family:"Inter",sans-serif;
+			font-weight:900;
+			letter-spacing:.02em;
+			font-size:12px;
+			line-height:1;
+			white-space:nowrap;
+		}
+		.careers-meta{
+			display:grid;
+			gap:8px;
+			margin:14px 0 0;
+			padding:0;
+			list-style:none;
+		}
+		.careers-meta li{
+			display:grid;
+			grid-template-columns:18px 1fr;
+			gap:10px;
+			align-items:start;
+			font-family:"DM Sans",sans-serif;
+			font-weight:700;
+			color:#0d1943;
+			opacity:.9;
+			line-height:1.7;
+		}
+		.careers-meta i{
+			font-size:16px;
+			line-height:1;
+			transform:translateY(3px);
+			color:#1A4574;
+		}
+		.careers-desc{
+			margin:12px 0 0;
+			font-family:"DM Sans",sans-serif;
+			font-weight:600;
+			color:#0d1943;
+			opacity:.9;
+			line-height:1.85;
+		}
+		.careers-actions{
+			margin-top:16px;
+			display:flex;
+			flex-wrap:wrap;
+			gap:10px;
+		}
+		.careers-action{
+			display:inline-flex;
+			align-items:center;
+			gap:8px;
+			padding:10px 12px;
+			border-radius:12px;
+			background:rgba(13,25,67,0.06);
+			color:#0d1943;
+			font-family:"Inter",sans-serif;
+			font-weight:900;
+			font-size:12px;
+			letter-spacing:.02em;
+			text-transform:uppercase;
+			line-height:1;
+			text-decoration:none;
+		}
+		.careers-action:hover,
+		.careers-action:focus{
+			text-decoration:underline;
+		}
+		.careers-action i{
+			font-size:16px;
+			line-height:1;
+			color:#1A4574;
+		}
+
+		.application-box{
+			border-radius:.5rem;
+			overflow:hidden;
+		}
+		.application-form{
+			padding:2.5rem 1.875rem;
+			background-color:#fff;
+			border-radius:.5rem;
+			box-shadow:0 14px 34px rgba(13,25,67,0.10);
+		}
+		.application-form .form-control{
+			border-radius:.4375rem;
+		}
+		.application-form .btn{
+			width:100%;
+			border-radius:.4375rem;
+		}
+		.file-pill{
+			display:inline-flex;
+			align-items:center;
+			gap:10px;
+			padding:12px 14px;
+			border-radius:14px;
+			background:rgba(26,69,116,0.08);
+			color:#0d1943;
+			font-family:"DM Sans",sans-serif;
+			font-weight:700;
+			line-height:1.5;
+		}
+		.file-pill i{
+			font-size:18px;
+			color:#1A4574;
+			line-height:1;
+		}
+		.small-help{
+			margin:10px 0 0;
+			font-family:"DM Sans",sans-serif;
+			font-weight:600;
+			color:#0d1943;
+			opacity:.85;
+			line-height:1.7;
+		}
+
+		.site-footer{
+			background:#1A4574;
+			color:rgba(255,255,255,.92);
+			padding:72px 0 22px;
+			position:relative;
+			overflow:hidden;
+		}
+		.site-footer a{
+			color:rgba(255,255,255,.92);
+			text-decoration:none;
+		}
+		.site-footer a:hover,
+		.site-footer a:focus{
+			color:#fff;
+			text-decoration:underline;
+		}
+		.footer-brand{
+			display:inline-flex;
+			align-items:center;
+			gap:14px;
+			max-width:100%;
+		}
+		.footer-brand__image{
+			height:44px;
+			width:auto;
+			display:block;
+			flex:0 0 auto;
+		}
+		.footer-tagline{
+			margin:16px 0 0;
+			font-family:"DM Sans",sans-serif;
+			font-weight:700;
+			line-height:1.7;
+			letter-spacing:.01em;
+			color:rgba(255,255,255,.92);
+			max-width:360px;
+			font-size:16px;
+			overflow-wrap:anywhere;
+		}
+		.footer-heading{
+			margin:0 0 18px;
+			font-family:"Inter",sans-serif;
+			font-weight:800;
+			letter-spacing:.02em;
+			color:#fff;
+			font-size:22px;
+		}
+		.footer-links{
+			list-style:none;
+			padding:0;
+			margin:0;
+			display:grid;
+			gap:14px;
+		}
+		.footer-links a{
+			display:inline-flex;
+			align-items:center;
+			gap:12px;
+			font-family:"DM Sans",sans-serif;
+			font-weight:700;
+			color:rgba(255,255,255,.92);
+			line-height:1.6;
+			font-size:18px;
+			max-width:100%;
+		}
+		.footer-links i{
+			font-size:18px;
+			line-height:1;
+			transform:translateY(1px);
+		}
+		.footer-contact{
+			list-style:none;
+			padding:0;
+			margin:0;
+			display:grid;
+			gap:18px;
+			font-size:16px;
+		}
+		.footer-contact li{
+			display:grid;
+			grid-template-columns:26px 1fr;
+			gap:14px;
+			align-items:start;
+			font-family:"DM Sans",sans-serif;
+			font-weight:700;
+			line-height:1.8;
+			letter-spacing:.01em;
+			color:rgba(255,255,255,.92);
+		}
+		.footer-contact i{
+			font-size:20px;
+			line-height:1;
+			transform:translateY(4px);
+			color:rgba(255,255,255,.95);
+		}
+		.footer-contact a{
+			word-break:break-word;
+			overflow-wrap:anywhere;
+		}
+		.footer-bottom{
+			margin-top:52px;
+			padding-top:22px;
+			border-top:1px solid rgba(255,255,255,.18);
+		}
+		.footer-copy{
+			margin:0;
+			font-family:"DM Sans",sans-serif;
+			font-weight:700;
+			color:rgba(255,255,255,.85);
+			line-height:1.7;
+			letter-spacing:.01em;
+			font-size:14px;
+		}
+		.footer-copy a{
+			color:#fff;
+			text-decoration:underline;
+			text-decoration-color:rgba(255,255,255,.55);
+		}
+
+		@media (min-width: 768px) and (max-width: 991.98px){
+			.site-footer .footer-col-1{padding-right:72px;}
+			.site-footer .footer-col-2{padding-left:36px;}
+			.site-footer .footer-col-3{padding-left:24px;}
+			.site-footer .footer-col-1 .footer-brand{margin-left:-10px;}
+			.site-footer .footer-col-1 .footer-tagline{margin-left:-10px;}
+		}
+		@media (min-width: 768px) and (max-width: 991.98px){
+			.footer-col-1 .footer-brand__image{margin-left:-14px;}
+		}
+
+		@media (max-width: 991.98px){
+			.application-form{
+				padding-left:1.25rem;
+				padding-right:1.25rem;
+			}
+		}
+
+		@media (max-width: 575.98px){
+			.site-footer{
+				padding:56px 0 18px;
+				text-align:center;
+			}
+			.footer-brand{
+				justify-content:center;
+			}
+			.footer-tagline{
+				max-width:none;
+				font-size:15px;
+			}
+			.footer-heading{
+				font-size:18px;
+				margin-bottom:14px;
+			}
+			.footer-links{
+				gap:10px;
+				justify-items:center;
+			}
+			.footer-links a{
+				font-size:15px;
+				justify-content:center;
+			}
+			.footer-contact{
+				gap:12px;
+				font-size:13px;
+				justify-items:center;
+			}
+			.footer-contact li{
+				display:grid;
+				grid-template-columns:22px 1fr;
+				gap:10px;
+				align-items:flex-start;
+				text-align:left;
+				width:100%;
+				max-width:520px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			.footer-contact i{
+				transform:translateY(2px);
+			}
+			.footer-bottom{
+				margin-top:38px;
+				padding-top:18px;
+			}
+			.footer-copy{
+				font-size:13px;
+			}
+		}
+	</style>
+</head>
+
+<body class="full-page">
+	<header class="header">
+		<nav class="navbar navbar-expand-lg">
+			<div class="container">
+				<a class="navbar-brand" href="./index.html">
+					<img src="./assets/images/logo/logo.png" alt="Logo" class="navbar-brand__image">
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="bi bi-list navbar-toggler__icon navbar-toggler__icon--open"></i>
+					<i class="bi bi-x-lg navbar-toggler__icon navbar-toggler__icon--close"></i>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav text-center mx-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="./index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./about.html">About Us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./contact.html">Contact Us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="./careers.html">Careers</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav text-center align-items-center"></ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="offCanvasMenuCloser position-fixed" data-toggle="collapse" data-target="#navbarSupportedContent" role="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></div>
+
+	<section class="sub-banner" data-parallax="scroll" data-image-src="./assets/images/banners/careers.jpeg">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h1 class="sub-banner__title">Careers</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-gap">
+		<div class="container">
+			<div class="row align-items-start">
+				<div class="col-lg-7">
+					<div class="mb-4" data-aos="fade-up">
+						<p class="careers-kicker">Join our team</p>
+						<h1 class="section-header__title careers-title">Work With Entally Blue Print</h1>
+						<p class="careers-lead">
+							We’re building a patient-first pharmacy experience through thoughtful service and organized care. If you’re passionate about helping people and working in a fast-moving environment, we’d love to hear from you.
+						</p>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6 mb-4" data-aos="fade-up">
+							<div class="careers-card">
+								<div class="careers-card__top">
+									<h3 class="careers-card__title">Pharmacist</h3>
+									<span class="careers-chip"><i class="bi bi-briefcase-fill"></i><span>Full-time</span></span>
+								</div>
+								<ul class="careers-meta">
+									<li><i class="bi bi-geo-alt-fill"></i><span>Entally, Kolkata</span></li>
+									<li><i class="bi bi-clock-fill"></i><span>Rotational shifts</span></li>
+								</ul>
+								<p class="careers-desc">Clinical review, patient counselling, and supporting medication-related problem solving with clear documentation.</p>
+								<div class="careers-actions">
+									<a class="careers-action" href="#apply"><i class="bi bi-send-fill"></i><span>Apply</span></a>
+									<a class="careers-action" href="mailto:customerservice@entallyblueprint.in?subject=Application%20-%20Pharmacist"><i class="bi bi-envelope-fill"></i><span>Email</span></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+							<div class="careers-card">
+								<div class="careers-card__top">
+									<h3 class="careers-card__title">Pharmacy Assistant</h3>
+									<span class="careers-chip"><i class="bi bi-briefcase-fill"></i><span>Full-time</span></span>
+								</div>
+								<ul class="careers-meta">
+									<li><i class="bi bi-geo-alt-fill"></i><span>Entally, Kolkata</span></li>
+									<li><i class="bi bi-clock-fill"></i><span>Mon – Sat</span></li>
+								</ul>
+								<p class="careers-desc">Help with billing, inventory, patient support, and smooth counter operations while keeping service patient-friendly.</p>
+								<div class="careers-actions">
+									<a class="careers-action" href="#apply"><i class="bi bi-send-fill"></i><span>Apply</span></a>
+									<a class="careers-action" href="mailto:customerservice@entallyblueprint.in?subject=Application%20-%20Pharmacy%20Assistant"><i class="bi bi-envelope-fill"></i><span>Email</span></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6 mb-4" data-aos="fade-up">
+							<div class="careers-card">
+								<div class="careers-card__top">
+									<h3 class="careers-card__title">Store Executive</h3>
+									<span class="careers-chip"><i class="bi bi-briefcase-fill"></i><span>Full-time</span></span>
+								</div>
+								<ul class="careers-meta">
+									<li><i class="bi bi-geo-alt-fill"></i><span>Entally, Kolkata</span></li>
+									<li><i class="bi bi-clock-fill"></i><span>Mon – Sat</span></li>
+								</ul>
+								<p class="careers-desc">Coordinate store operations, vendor follow-ups, and front-desk service with a strong focus on customer experience.</p>
+								<div class="careers-actions">
+									<a class="careers-action" href="#apply"><i class="bi bi-send-fill"></i><span>Apply</span></a>
+									<a class="careers-action" href="mailto:customerservice@entallyblueprint.in?subject=Application%20-%20Store%20Executive"><i class="bi bi-envelope-fill"></i><span>Email</span></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+							<div class="careers-card">
+								<div class="careers-card__top">
+									<h3 class="careers-card__title">Delivery Partner</h3>
+									<span class="careers-chip"><i class="bi bi-briefcase-fill"></i><span>Part-time</span></span>
+								</div>
+								<ul class="careers-meta">
+									<li><i class="bi bi-geo-alt-fill"></i><span>Kolkata (local routes)</span></li>
+									<li><i class="bi bi-clock-fill"></i><span>Flexible hours</span></li>
+								</ul>
+								<p class="careers-desc">Support timely deliveries and assist with a smooth experience for customers receiving medicines and pharmacy items.</p>
+								<div class="careers-actions">
+									<a class="careers-action" href="#apply"><i class="bi bi-send-fill"></i><span>Apply</span></a>
+									<a class="careers-action" href="mailto:customerservice@entallyblueprint.in?subject=Application%20-%20Delivery%20Partner"><i class="bi bi-envelope-fill"></i><span>Email</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="mt-2" data-aos="fade-up">
+						<div class="file-pill">
+							<i class="bi bi-info-circle-fill"></i>
+							<span>Don’t see the right role? Send your resume anyway — we’ll reach out when something matches.</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-5 mt-4 mt-lg-0" id="apply">
+					<div class="application-box" data-aos="fade-up">
+						<form action="https://formspree.io/f/mwvnzdro" method="POST" enctype="multipart/form-data" class="application-form form needs-validation" novalidate>
+							<div class="mb-4">
+								<p class="careers-kicker mb-2">Apply now</p>
+								<h2 class="section-header__title careers-title" style="font-size:32px;">Application</h2>
+								<p class="small-help mb-0">Fill in your details and attach your resume (optional). We’ll contact you soon.</p>
+							</div>
+
+							<input type="hidden" name="_subject" value="New Careers Application - Entally Blue Print">
+
+							<div class="form-group mb-3">
+								<input type="text" class="form-control" placeholder="Full Name" name="name" required>
+								<div class="invalid-tooltip">Please enter your name.</div>
+							</div>
+
+							<div class="form-group mb-3">
+								<input type="email" class="form-control" placeholder="Email" name="email" required>
+								<div class="invalid-tooltip">Please provide a valid email.</div>
+							</div>
+
+							<div class="form-group mb-3">
+								<input type="tel" class="form-control" placeholder="Phone" name="phone">
+							</div>
+
+							<div class="form-group mb-3">
+								<select class="form-control" name="position" required>
+									<option value="" selected disabled>Position Interested In</option>
+									<option value="Pharmacist">Pharmacist</option>
+									<option value="Pharmacy Assistant">Pharmacy Assistant</option>
+									<option value="Store Executive">Store Executive</option>
+									<option value="Delivery Partner">Delivery Partner</option>
+									<option value="Other">Other</option>
+								</select>
+								<div class="invalid-tooltip">Please select a position.</div>
+							</div>
+
+							<div class="form-group mb-3">
+								<input type="file" class="form-control" name="resume" accept=".pdf,.doc,.docx">
+							</div>
+
+							<div class="form-group mb-4">
+								<textarea class="form-control" placeholder="Tell us about yourself" name="message" rows="6"></textarea>
+							</div>
+
+							<button type="submit" class="btn">Submit Application</button>
+
+							<div class="submission-status-wrapper d-none mt-3">
+								<div class="submission-status submission-status--success">
+									Thank you 😊. Your application has been received.
+								</div>
+							</div>
+						</form>
+
+						<p class="small-help mt-3 mb-0">
+							Prefer email? Send your resume to <a href="mailto:customerservice@entallyblueprint.in">customerservice@entallyblueprint.in</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="site-footer mt-auto">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-lg-4 mb-4 mb-md-0 footer-col-1">
+					<a href="./index.html" class="footer-brand">
+						<img src="./assets/images/logo/logo-footer.png" alt="Entally Blue Print" class="footer-brand__image">
+					</a>
+					<p class="footer-tagline">Your Trusted Pharmacy for Patient-Focused Care</p>
+				</div>
+
+				<div class="col-md-4 col-lg-4 mb-4 mb-md-0 footer-col-2">
+					<h3 class="footer-heading">Quick Links</h3>
+					<ul class="footer-links">
+						<li><a href="./index.html"><span>Home</span></a></li>
+						<li><a href="./about.html"><span>About Us</span></a></li>
+						<li><a href="./contact.html"><span>Contact Us</span></a></li>
+						<li><a href="./careers.html"><span>Careers</span></a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 col-lg-4 footer-col-3">
+					<h3 class="footer-heading">Contact Us</h3>
+					<ul class="footer-contact">
+						<li>
+							<i class="bi bi-telephone-fill"></i>
+							<div><a href="tel:+919903640888">+91 9903640888</a></div>
+						</li>
+						<li>
+							<i class="bi bi-envelope-fill"></i>
+							<div><a href="mailto:customerservice@entallyblueprint.in">customerservice@entallyblueprint.in</a></div>
+						</li>
+						<li>
+							<i class="bi bi-geo-alt-fill"></i>
+							<div>
+								<a href="https://maps.app.goo.gl/iagejNvk3Bjm7fzs6" target="_blank" rel="noopener">
+									Shop No, SB(P)32, 156 Acharya Jagdish Chandra Bose Rd, Market, Entally, Kolkata, West Bengal - 700014
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<div class="row align-items-center">
+					<div class="col-12 text-center">
+						<p class="footer-copy">© 2026 All Rights Reserved, <a href="./index.html">Entally Blue Print</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./assets/plugins/aos/js/aos.js"></script>
+	<script src="./assets/plugins/parallax/js/parallax.min.js"></script>
+	<script src="./assets/js/script.js"></script>
+	<script>
+		window.addEventListener('load', function() {
+			var forms = document.getElementsByClassName('needs-validation');
+
+			Array.prototype.filter.call(forms, function(form) {
+				form.addEventListener('submit', async function(event) {
+					event.preventDefault();
+					event.stopPropagation();
+
+					if (!form.checkValidity()) {
+						form.classList.add('was-validated');
+						return;
+					}
+
+					var submitBtn = form.querySelector('button[type="submit"]');
+					if (submitBtn) submitBtn.disabled = true;
+
+					try {
+						var formData = new FormData(form);
+						var endpoint = form.getAttribute('action');
+
+						var res = await fetch(endpoint, {
+							method: 'POST',
+							body: formData,
+							headers: { 'Accept': 'application/json' }
+						});
+
+						if (res.ok) {
+							form.classList.add('d-none');
+							var wrapper = document.querySelector('.submission-status-wrapper');
+							if (wrapper) wrapper.classList.remove('d-none');
+						} else {
+							if (submitBtn) submitBtn.disabled = false;
+							alert('Submission failed. Please try again or email customerservice@entallyblueprint.in');
+						}
+					} catch (e) {
+						if (submitBtn) submitBtn.disabled = false;
+						alert('Something went wrong. Please try again or email customerservice@entallyblueprint.in');
+					}
+
+					form.classList.add('was-validated');
+				}, false);
+			});
+		}, false);
+	</script>
+</body>
+</html>

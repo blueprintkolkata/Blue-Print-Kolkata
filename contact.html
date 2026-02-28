@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Entally Blue Print">
+	<meta name="description" content="designed for patient focused care">
+	<meta name="keywords" content="patient, care, pharmacy, Entally Blue Print, pharmacy-files">
+	<title>Contact Us | Entally Blue Print</title>
+
+	<link rel="icon" href="./assets/images/favicon/favicon.ico">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/aos/css/aos.css">
+	<link rel="stylesheet" href="./assets/css/style.min.css">
+
+	<style>
+		.contact-split .contact-kicker{
+			letter-spacing:.25em;
+			text-transform:uppercase;
+			font-weight:700;
+			margin:0 0 10px 0;
+			color:#0d1943;
+			font-family:"DM Sans",sans-serif;
+		}
+		.contact-split .contact-title{
+			margin:0 0 18px 0;
+			line-height:1;
+			color:#1A4574;
+			font-family:"Inter",sans-serif;
+		}
+		.contact-form-box{
+			border-radius:.5rem;
+			overflow:hidden;
+		}
+		.contact-form-box .contact-form{
+			padding:2.5rem 1.875rem;
+			background-color:#fff;
+			border-radius:.5rem;
+		}
+		@media (max-width: 575.98px){
+			.contact-form-box .contact-form{
+				padding-left:1.25rem;
+				padding-right:1.25rem;
+			}
+		}
+		.contact-form-box .form-control{
+			border-radius:.4375rem;
+		}
+		.contact-form-box .btn{
+			width:100%;
+			border-radius:.4375rem;
+		}
+
+		.contact-info-grid{
+			display:grid;
+			grid-template-columns:repeat(2, minmax(0, 1fr));
+			gap:22px;
+			align-items:stretch;
+		}
+
+		.contact-info-card{
+			border-radius:16px;
+			padding:26px 24px;
+			background-color:#1A4574;
+			color:#fff;
+			box-shadow:0 14px 34px rgba(13,25,67,0.12);
+			min-height:230px;
+			display:flex;
+			flex-direction:column;
+		}
+
+		.contact-info-icon{
+			width:52px;
+			height:52px;
+			border-radius:14px;
+			background:#0d1943;
+			display:inline-flex;
+			align-items:center;
+			justify-content:center;
+			box-shadow:0 14px 34px rgba(13,25,67,0.16);
+			margin-bottom:16px;
+			flex:0 0 auto;
+		}
+		.contact-info-icon i{
+			font-size:22px;
+			color:#fff;
+			line-height:1;
+		}
+
+		.contact-info-title{
+			margin:0 0 10px 0;
+			font-family:"Inter",sans-serif;
+			font-weight:800;
+			font-size:18px;
+			letter-spacing:.04em;
+			text-transform:uppercase;
+			color:#fff;
+			flex:0 0 auto;
+		}
+
+		.contact-info-text{
+			margin:0;
+			font-family:"DM Sans",sans-serif;
+			font-weight:600;
+			font-size:16px;
+			line-height:1.8;
+			color:#fff;
+		}
+
+		.contact-info-text a{
+			color:inherit;
+			text-decoration:none;
+		}
+		.contact-info-text a:hover,
+		.contact-info-text a:focus{
+			text-decoration:underline;
+		}
+
+		.contact-primary-link{
+			display:inline-block;
+			white-space:nowrap;
+			font-size:clamp(15px, 2.1vw, 20px);
+			font-weight:800;
+			letter-spacing:.01em;
+			line-height:1.25;
+		}
+
+		.contact-actions{
+			margin-top:14px;
+			display:flex;
+			gap:10px;
+			flex-wrap:wrap;
+		}
+
+		.contact-action{
+			display:inline-flex;
+			align-items:center;
+			gap:8px;
+			padding:10px 12px;
+			border-radius:12px;
+			background:rgba(13,25,67,0.55);
+			box-shadow:0 10px 22px rgba(13,25,67,0.22);
+			font-family:"Inter",sans-serif;
+			font-weight:800;
+			font-size:13px;
+			letter-spacing:.02em;
+			text-transform:uppercase;
+			line-height:1;
+			white-space:nowrap;
+			text-decoration:none;
+			color:#fff;
+		}
+		.contact-action:hover,
+		.contact-action:focus{
+			text-decoration:underline;
+		}
+		.contact-action i{
+			font-size:16px;
+			line-height:1;
+		}
+
+		.email-two-line{
+			display:inline-block;
+			max-width:100%;
+			font-size:clamp(13px, 2.4vw, 16px);
+			font-weight:700;
+			line-height:1.4;
+		}
+		.email-two-line span{
+			display:block;
+			white-space:nowrap;
+		}
+
+		.hours-one-line{
+			display:block;
+			white-space:nowrap;
+			font-size:clamp(12px, 2.2vw, 16px);
+			font-weight:700;
+			line-height:1.55;
+		}
+
+		.location-link{
+			display:block;
+		}
+
+		@media (max-width: 991.98px){
+			.contact-right{
+				margin-top:0 !important;
+			}
+			.contact-info-grid{
+				grid-template-columns:1fr;
+				gap:18px;
+			}
+			.contact-info-card{
+				min-height:auto;
+			}
+			.contact-actions{
+				gap:8px;
+			}
+			.contact-action{
+				padding:10px 12px;
+			}
+		}
+
+		.site-footer{
+			background:#1A4574;
+			color:rgba(255,255,255,.92);
+			padding:72px 0 22px;
+			position:relative;
+			overflow:hidden;
+		}
+		.site-footer a{
+			color:rgba(255,255,255,.92);
+			text-decoration:none;
+		}
+		.site-footer a:hover,
+		.site-footer a:focus{
+			color:#fff;
+			text-decoration:underline;
+		}
+		.footer-brand{
+			display:inline-flex;
+			align-items:center;
+			gap:14px;
+			max-width:100%;
+		}
+		.footer-brand__image{
+			height:44px;
+			width:auto;
+			display:block;
+			flex:0 0 auto;
+		}
+		.footer-tagline{
+			margin:16px 0 0;
+			font-family:"DM Sans",sans-serif;
+			font-weight:700;
+			line-height:1.7;
+			letter-spacing:.01em;
+			color:rgba(255,255,255,.92);
+			max-width:360px;
+			font-size:16px;
+			overflow-wrap:anywhere;
+		}
+		.footer-heading{
+			margin:0 0 18px;
+			font-family:"Inter",sans-serif;
+			font-weight:800;
+			letter-spacing:.02em;
+			color:#fff;
+			font-size:22px;
+		}
+		.footer-links{
+			list-style:none;
+			padding:0;
+			margin:0;
+			display:grid;
+			gap:14px;
+		}
+		.footer-links a{
+			display:inline-flex;
+			align-items:center;
+			gap:12px;
+			font-family:"DM Sans",sans-serif;
+			font-weight:700;
+			color:rgba(255,255,255,.92);
+			line-height:1.6;
+			font-size:18px;
+			max-width:100%;
+		}
+		.footer-links i{
+			font-size:18px;
+			line-height:1;
+			transform:translateY(1px);
+		}
+		.footer-contact{
+			list-style:none;
+			padding:0;
+			margin:0;
+			display:grid;
+			gap:18px;
+			font-size:16px;
+		}
+		.footer-contact li{
+			display:grid;
+			grid-template-columns:26px 1fr;
+			gap:14px;
+			align-items:start;
+			font-family:"DM Sans",sans-serif;
+			font-weight:700;
+			line-height:1.8;
+			letter-spacing:.01em;
+			color:rgba(255,255,255,.92);
+		}
+		.footer-contact i{
+			font-size:20px;
+			line-height:1;
+			transform:translateY(4px);
+			color:rgba(255,255,255,.95);
+		}
+		.footer-contact a{
+			word-break:break-word;
+			overflow-wrap:anywhere;
+		}
+		.footer-bottom{
+			margin-top:52px;
+			padding-top:22px;
+			border-top:1px solid rgba(255,255,255,.18);
+		}
+		.footer-copy{
+			margin:0;
+			font-family:"DM Sans",sans-serif;
+			font-weight:700;
+			color:rgba(255,255,255,.85);
+			line-height:1.7;
+			letter-spacing:.01em;
+			font-size:14px;
+		}
+		.footer-copy a{
+			color:#fff;
+			text-decoration:underline;
+			text-decoration-color:rgba(255,255,255,.55);
+		}
+
+		@media (min-width: 768px) and (max-width: 991.98px){
+			.site-footer .footer-col-1{padding-right:72px;}
+			.site-footer .footer-col-2{padding-left:36px;}
+			.site-footer .footer-col-3{padding-left:24px;}
+			.site-footer .footer-col-1 .footer-brand{margin-left:-10px;}
+			.site-footer .footer-col-1 .footer-tagline{margin-left:-10px;}
+		}
+		@media (min-width: 768px) and (max-width: 991.98px){
+			.footer-col-1 .footer-brand__image{margin-left:-14px;}
+		}
+
+		@media (max-width: 575.98px){
+			.site-footer{
+				padding:56px 0 18px;
+				text-align:center;
+			}
+			.footer-brand{
+				justify-content:center;
+			}
+			.footer-tagline{
+				max-width:none;
+				font-size:15px;
+			}
+			.footer-heading{
+				font-size:18px;
+				margin-bottom:14px;
+			}
+			.footer-links{
+				gap:10px;
+				justify-items:center;
+			}
+			.footer-links a{
+				font-size:15px;
+				justify-content:center;
+			}
+			.footer-contact{
+				gap:12px;
+				font-size:13px;
+				justify-items:center;
+			}
+			.footer-contact li{
+				display:grid;
+				grid-template-columns:22px 1fr;
+				gap:10px;
+				align-items:flex-start;
+				text-align:left;
+				width:100%;
+				max-width:520px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			.footer-contact i{
+				transform:translateY(2px);
+			}
+			.footer-bottom{
+				margin-top:38px;
+				padding-top:18px;
+			}
+			.footer-copy{
+				font-size:13px;
+			}
+		}
+
+		.whatsapp-floater{
+			position:fixed;
+			right:22px;
+			bottom:22px;
+			width:56px;
+			height:56px;
+			border-radius:50%;
+			background:#25D366;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			box-shadow:0 14px 28px rgba(0,0,0,0.22);
+			z-index:9999;
+			transition:transform .15s ease, box-shadow .15s ease;
+			text-decoration:none;
+		}
+		.whatsapp-floater:focus{
+			outline:0;
+			box-shadow:0 0 0 4px rgba(37,211,102,0.28), 0 14px 28px rgba(0,0,0,0.22);
+		}
+		.whatsapp-floater:hover{
+			transform:translateY(-1px);
+		}
+		.whatsapp-floater svg{
+			width:45px;
+			height:45px;
+			display:block;
+			fill:#fff;
+		}
+		@media (max-width: 575.98px){
+			.whatsapp-floater{
+				right:18px;
+				bottom:18px;
+				width:54px;
+				height:54px;
+			}
+			.whatsapp-floater svg{
+				width:40px;
+				height:50px;
+			}
+		}
+	</style>
+</head>
+
+<body class="full-page">
+	<header class="header">
+		<nav class="navbar navbar-expand-lg">
+			<div class="container">
+				<a class="navbar-brand" href="./index.html">
+					<img src="./assets/images/logo/logo.png" alt="Logo" class="navbar-brand__image">
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="bi bi-list navbar-toggler__icon navbar-toggler__icon--open"></i>
+					<i class="bi bi-x-lg navbar-toggler__icon navbar-toggler__icon--close"></i>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav text-center mx-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="./index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./about.html">About Us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="./contact.html">Contact Us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./careers.html">Careers</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav text-center align-items-center"></ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="offCanvasMenuCloser position-fixed" data-toggle="collapse" data-target="#navbarSupportedContent" role="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></div>
+
+	<section class="contact section-gap contact-split">
+		<div class="container">
+			<div class="row align-items-start">
+				<div class="col-lg-6">
+					<div class="mb-4">
+						<p class="contact-kicker">Get in touch</p>
+						<h1 class="section-header__title contact-title">Contact</h1>
+					</div>
+
+					<div class="contact-form-box">
+						<form action="#!" class="contact-form form needs-validation" novalidate data-aos="fade-up">
+							<div class="form-group mb-3">
+								<input type="text" class="form-control" placeholder="Name" name="name" required>
+								<div class="invalid-tooltip">Please enter your name.</div>
+							</div>
+
+							<div class="form-row">
+								<div class="col-md-6">
+									<div class="form-group mb-3">
+										<input type="email" class="form-control" placeholder="Email" name="email_address" required>
+										<div class="invalid-tooltip">Please provide a valid email.</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group mb-3">
+										<input type="tel" class="form-control" placeholder="Phone" name="phone_number">
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group mb-3">
+								<input type="text" class="form-control" placeholder="City" name="city">
+							</div>
+
+							<div class="form-group mb-4">
+								<textarea class="form-control" placeholder="Message" name="message" rows="7"></textarea>
+							</div>
+
+							<button type="submit" class="btn">Submit</button>
+						</form>
+
+						<div class="submission-status-wrapper d-none">
+							<div class="submission-status submission-status--success">
+								Thank you 😊. Your submission has been received.
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6 contact-right">
+					<div class="contact-info-grid" data-aos="fade-up">
+						<div class="contact-info-card">
+							<div class="contact-info-icon"><i class="bi bi-telephone-fill"></i></div>
+							<h3 class="contact-info-title">CALL / WHATSAPP</h3>
+							<p class="contact-info-text">
+								<a class="contact-primary-link" href="tel:+919903640888">+91 9903640888</a>
+							</p>
+							<div class="contact-actions">
+								<a class="contact-action" href="tel:+919903640888"><i class="bi bi-telephone-fill"></i><span>Call</span></a>
+								<a class="contact-action" href="https://wa.me/919903640888" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i><span>WhatsApp</span></a>
+							</div>
+						</div>
+
+						<div class="contact-info-card">
+							<div class="contact-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+							<h3 class="contact-info-title">LOCATION</h3>
+							<p class="contact-info-text">
+								<a class="location-link" href="https://maps.app.goo.gl/iagejNvk3Bjm7fzs6" target="_blank" rel="noopener">
+									Shop No, SB(P)32<br>
+									156, Acharya Jagdish Chandra Bose Rd, Market,<br>
+									Entally, Kolkata, West Bengal - 700014
+								</a>
+							</p>
+						</div>
+
+						<div class="contact-info-card">
+							<div class="contact-info-icon"><i class="bi bi-envelope-fill"></i></div>
+							<h3 class="contact-info-title">EMAIL</h3>
+							<p class="contact-info-text">
+								<a class="email-two-line" href="mailto:customerservice@entallyblueprint.in">
+									<span>customerservice@</span>
+									<span>entallyblueprint.in</span>
+								</a>
+							</p>
+						</div>
+
+						<div class="contact-info-card">
+							<div class="contact-info-icon"><i class="bi bi-clock-fill"></i></div>
+							<h3 class="contact-info-title">WORKING HOURS</h3>
+							<p class="contact-info-text">
+								<span class="hours-one-line">Mon – Sat 9:00 AM–11:00 PM</span>
+								<span class="hours-one-line">Sun:  9:00 AM– 4:00 PM</span>
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<footer class="site-footer mt-auto">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-lg-4 mb-4 mb-md-0 footer-col-1">
+					<a href="./index.html" class="footer-brand">
+						<img src="./assets/images/logo/logo-footer.png" alt="Entally Blue Print" class="footer-brand__image">
+					</a>
+					<p class="footer-tagline">Your Trusted Pharmacy for Patient-Focused Care</p>
+				</div>
+
+				<div class="col-md-4 col-lg-4 mb-4 mb-md-0 footer-col-2">
+					<h3 class="footer-heading">Quick Links</h3>
+					<ul class="footer-links">
+						<li><a href="./index.html"><span>Home</span></a></li>
+						<li><a href="./about.html"><span>About Us</span></a></li>
+						<li><a href="./contact.html"><span>Contact Us</span></a></li>
+						<li><a href="./careers.html"><span>Careers</span></a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 col-lg-4 footer-col-3">
+					<h3 class="footer-heading">Contact Us</h3>
+					<ul class="footer-contact">
+						<li>
+							<i class="bi bi-telephone-fill"></i>
+							<div>
+								<a href="tel:+919903640888">+91 9903640888</a>
+							</div>
+						</li>
+						<li>
+							<i class="bi bi-envelope-fill"></i>
+							<div><a href="mailto:customerservice@entallyblueprint.in">customerservice@entallyblueprint.in</a></div>
+						</li>
+						<li>
+							<i class="bi bi-geo-alt-fill"></i>
+							<div>
+								<a href="https://maps.app.goo.gl/iagejNvk3Bjm7fzs6" target="_blank" rel="noopener">
+									Shop No, SB(P)32, 156 Acharya Jagdish Chandra Bose Rd, Market, Entally, Kolkata, West Bengal - 700014
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<div class="row align-items-center">
+					<div class="col-12 text-center">
+						<p class="footer-copy">© 2026 All Rights Reserved, <a href="./index.html">Entally Blue Print</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<a class="whatsapp-floater" href="https://wa.me/919903640888" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+		<svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+			<path d="M19.11 17.53c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.18-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.29-.74-1.77-.19-.46-.38-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.17.86 2.31.98 2.47.12.16 1.69 2.58 4.11 3.62.57.25 1.02.4 1.36.51.57.18 1.09.16 1.5.1.46-.07 1.43-.58 1.63-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28zM16.02 26.67h-.01c-1.68 0-3.32-.45-4.76-1.3l-.34-.2-3.35.88.9-3.26-.22-.33a9.9 9.9 0 0 1-1.56-5.31c0-5.46 4.45-9.9 9.91-9.9 2.65 0 5.14 1.03 7.01 2.9a9.85 9.85 0 0 1 2.9 7.01c0 5.46-4.45 9.91-9.91 9.91zm8.42-18.33A11.85 11.85 0 0 0 16.02 4.7c-6.56 0-11.9 5.34-11.9 11.9 0 2.1.55 4.16 1.6 5.98L4 28.3l5.86-1.54a11.86 11.86 0 0 0 6.16 1.72h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.18-3.49-8.43z"/>
+		</svg>
+	</a>
+
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./assets/plugins/aos/js/aos.js"></script>
+	<script src="./assets/js/script.js"></script>
+	<script>
+		window.addEventListener('load', function() {
+			var forms = document.getElementsByClassName('needs-validation');
+			Array.prototype.filter.call(forms, function(form) {
+				form.addEventListener('submit', function(event) {
+					if (!form.checkValidity()) {
+						event.preventDefault();
+						event.stopPropagation();
+					} else {
+						event.preventDefault();
+						form.classList.add('d-none');
+						$(".submission-status-wrapper").removeClass("d-none");
+					}
+					form.classList.add('was-validated');
+				}, false);
+			});
+		}, false);
+	</script>
+</body>
+</html>
