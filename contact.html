@@ -481,7 +481,11 @@
 					</div>
 
 					<div class="contact-form-box">
-						<form action="#!" class="contact-form form needs-validation" novalidate data-aos="fade-up">
+						<form action="https://formspree.io/f/mkovlwnd" method="POST" class="contact-form form needs-validation" novalidate data-aos="fade-up" id="contactForm">
+							<input type="hidden" name="_subject" value="New Contact Form Submission - Entally Blue Print">
+							<input type="hidden" name="_format" value="plain">
+							<input type="hidden" name="_redirect" value="./contact.html?success=1">
+
 							<div class="form-group mb-3">
 								<input type="text" class="form-control" placeholder="Name" name="name" required>
 								<div class="invalid-tooltip">Please enter your name.</div>
@@ -490,7 +494,7 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-group mb-3">
-										<input type="email" class="form-control" placeholder="Email" name="email_address" required>
+										<input type="email" class="form-control" placeholder="Email" name="email" required>
 										<div class="invalid-tooltip">Please provide a valid email.</div>
 									</div>
 								</div>
@@ -506,7 +510,8 @@
 							</div>
 
 							<div class="form-group mb-4">
-								<textarea class="form-control" placeholder="Message" name="message" rows="7"></textarea>
+								<textarea class="form-control" placeholder="Message" name="message" rows="7" required></textarea>
+								<div class="invalid-tooltip">Please enter a message.</div>
 							</div>
 
 							<button type="submit" class="btn">Submit</button>
@@ -639,18 +644,21 @@
 	<script src="./assets/js/script.js"></script>
 	<script>
 		window.addEventListener('load', function() {
+			var params = new URLSearchParams(window.location.search);
+			if (params.get('success') === '1') {
+				$('#contactForm').addClass('d-none');
+				$('.submission-status-wrapper').removeClass('d-none');
+			}
+
 			var forms = document.getElementsByClassName('needs-validation');
 			Array.prototype.filter.call(forms, function(form) {
 				form.addEventListener('submit', function(event) {
 					if (!form.checkValidity()) {
 						event.preventDefault();
 						event.stopPropagation();
-					} else {
-						event.preventDefault();
-						form.classList.add('d-none');
-						$(".submission-status-wrapper").removeClass("d-none");
+						form.classList.add('was-validated');
+						return;
 					}
-					form.classList.add('was-validated');
 				}, false);
 			});
 		}, false);
