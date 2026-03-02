@@ -522,7 +522,7 @@
 
 				<div class="col-lg-5 mt-4 mt-lg-0" id="apply">
 					<div class="application-box" data-aos="fade-up">
-						<form action="https://formspree.io/f/mwvnzdro" method="POST" enctype="multipart/form-data" class="application-form form needs-validation" novalidate>
+						<form action="https://formspree.io/f/mwvnzdro" method="POST" enctype="multipart/form-data" class="application-form form needs-validation" novalidate id="applicationForm">
 							<div class="mb-4">
 								<p class="careers-kicker mb-2">Apply now</p>
 								<h2 class="section-header__title careers-title" style="font-size:32px;">Application</h2>
@@ -530,6 +530,7 @@
 							</div>
 
 							<input type="hidden" name="_subject" value="New Careers Application - Entally Blue Print">
+							<input type="hidden" name="_redirect" value="./careers.html?success=1#apply">
 
 							<div class="form-group mb-3">
 								<input type="text" class="form-control" placeholder="Full Name" name="name" required>
@@ -567,7 +568,7 @@
 
 							<button type="submit" class="btn">Submit Application</button>
 
-							<div class="submission-status-wrapper d-none mt-3">
+							<div class="submission-status-wrapper d-none mt-3" id="successWrapper">
 								<div class="submission-status submission-status--success">
 									Thank you 😊. Your application has been received.
 								</div>
@@ -643,44 +644,19 @@
 	<script src="./assets/js/script.js"></script>
 	<script>
 		window.addEventListener('load', function() {
+			var params = new URLSearchParams(window.location.search);
+			if (params.get('success') === '1') {
+				$('#applicationForm').addClass('d-none');
+				$('#successWrapper').removeClass('d-none');
+			}
+
 			var forms = document.getElementsByClassName('needs-validation');
-
 			Array.prototype.filter.call(forms, function(form) {
-				form.addEventListener('submit', async function(event) {
-					event.preventDefault();
-					event.stopPropagation();
-
+				form.addEventListener('submit', function(event) {
 					if (!form.checkValidity()) {
-						form.classList.add('was-validated');
-						return;
+						event.preventDefault();
+						event.stopPropagation();
 					}
-
-					var submitBtn = form.querySelector('button[type="submit"]');
-					if (submitBtn) submitBtn.disabled = true;
-
-					try {
-						var formData = new FormData(form);
-						var endpoint = form.getAttribute('action');
-
-						var res = await fetch(endpoint, {
-							method: 'POST',
-							body: formData,
-							headers: { 'Accept': 'application/json' }
-						});
-
-						if (res.ok) {
-							form.classList.add('d-none');
-							var wrapper = document.querySelector('.submission-status-wrapper');
-							if (wrapper) wrapper.classList.remove('d-none');
-						} else {
-							if (submitBtn) submitBtn.disabled = false;
-							alert('Submission failed. Please try again or email customerservice@entallyblueprint.in');
-						}
-					} catch (e) {
-						if (submitBtn) submitBtn.disabled = false;
-						alert('Something went wrong. Please try again or email customerservice@entallyblueprint.in');
-					}
-
 					form.classList.add('was-validated');
 				}, false);
 			});
